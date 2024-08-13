@@ -245,7 +245,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   widht: 16
   height: 9
-  tilePrefab: {fileID: 8598677038026697531, guid: 175eac90a2dd4fe4fa92137ebf303ba9, type: 3}
+  GrassTile: {fileID: -933343058924101946, guid: 175eac90a2dd4fe4fa92137ebf303ba9, type: 3}
+  MountainTile: {fileID: 6955683752409476073, guid: 6e3b53665bb1ce046b1ffd5bffa4bb23, type: 3}
+  ForestTile: {fileID: 9218757797692970705, guid: 2f6aef0bfd6c88543b848a3895d94cbd, type: 3}
   cam: {fileID: 519420032}
 --- !u!4 &1857386677
 Transform:

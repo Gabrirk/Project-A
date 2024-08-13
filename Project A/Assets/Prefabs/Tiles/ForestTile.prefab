@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8591079555967331211
+--- !u!1001 &4774914774267119588
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,19 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2203478575652535226, guid: 5c02d2f5530cda0488c1fa6b8bbaaf89, type: 3}
       propertyPath: m_Color.b
-      value: 0.4130473
+      value: 0.034843363
       objectReference: {fileID: 0}
     - target: {fileID: 2203478575652535226, guid: 5c02d2f5530cda0488c1fa6b8bbaaf89, type: 3}
       propertyPath: m_Color.g
-      value: 0.735849
+      value: 0.2735849
       objectReference: {fileID: 0}
     - target: {fileID: 2203478575652535226, guid: 5c02d2f5530cda0488c1fa6b8bbaaf89, type: 3}
       propertyPath: m_Color.r
-      value: 0.4474917
+      value: 0.14302756
       objectReference: {fileID: 0}
     - target: {fileID: 3020733703728121393, guid: 5c02d2f5530cda0488c1fa6b8bbaaf89, type: 3}
       propertyPath: m_Name
-      value: GrassTile
+      value: ForestTile
       objectReference: {fileID: 0}
     - target: {fileID: 4831999442848740810, guid: 5c02d2f5530cda0488c1fa6b8bbaaf89, type: 3}
       propertyPath: m_LocalPosition.x
@@ -70,23 +70,23 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3020733703728121393, guid: 5c02d2f5530cda0488c1fa6b8bbaaf89, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -933343058924101946}
+      addedObject: {fileID: 9218757797692970705}
   m_SourcePrefab: {fileID: 100100000, guid: 5c02d2f5530cda0488c1fa6b8bbaaf89, type: 3}
---- !u!1 &6832638046514343354 stripped
+--- !u!1 &7757497623240966613 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3020733703728121393, guid: 5c02d2f5530cda0488c1fa6b8bbaaf89, type: 3}
-  m_PrefabInstance: {fileID: 8591079555967331211}
+  m_PrefabInstance: {fileID: 4774914774267119588}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-933343058924101946
+--- !u!114 &9218757797692970705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6832638046514343354}
+  m_GameObject: {fileID: 7757497623240966613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 177346164ccf4df42a2adc04e9fab6aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f21bae9cf403bf4d89c735569469c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.44705886, g: 0.7372549, b: 0.41176474, a: 0}
+  color: {r: 0.14117648, g: 0.27450982, b: 0.03529412, a: 0}
