@@ -10,7 +10,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private bool isWalkable;
 
     public string tileName; 
-    private TileHandler tileHandler;
+    private PlayerHandler playerHandler;
     public BaseUnit OccupiedUnit; 
 
 
@@ -19,10 +19,10 @@ public class Tile : MonoBehaviour
     private void Awake()
     {
         // Ensure TileHandler is attached to the same GameObject as this Tile
-        tileHandler = GetComponent<TileHandler>();
-        if (tileHandler != null)
+        playerHandler = GetComponent<PlayerHandler>();
+        if (playerHandler != null)
         {
-            tileHandler.Initialize(this);
+            playerHandler.Initialize(this);
         }
         else
         {
@@ -50,9 +50,9 @@ public class Tile : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (tileHandler != null)
+        if (playerHandler != null)
         {
-            tileHandler.HandleTileClick();
+            playerHandler.HandleTileClick();
         }
         else
         {

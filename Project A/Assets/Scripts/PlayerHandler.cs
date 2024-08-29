@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class TileHandler : MonoBehaviour
+public class PlayerHandler : MonoBehaviour
 {
     private Tile tile;
 
