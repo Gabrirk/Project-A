@@ -5,8 +5,6 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     [SerializeField] private Color baseColor;
-    [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private GameObject highlight;
     [SerializeField] private bool isWalkable;
     public string tileName;
 
@@ -20,12 +18,10 @@ public class Tile : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        highlight.SetActive(true);
         MenuManager.instance.ShowTileInfo(this);
     }
     private void OnMouseExit()
     {
-        highlight.SetActive(false);
         MenuManager.instance.ShowTileInfo(null);
     }
 
