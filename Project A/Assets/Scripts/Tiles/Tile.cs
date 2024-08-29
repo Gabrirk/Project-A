@@ -6,12 +6,12 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
 
-    [SerializeField] private Color baseColor; 
+    [SerializeField] private Color baseColor;
     [SerializeField] private bool isWalkable;
 
-    public string tileName; 
+    public string tileName;
     private PlayerHandler playerHandler;
-    public BaseUnit OccupiedUnit; 
+    public BaseUnit OccupiedUnit;
 
 
     public bool walkable => isWalkable && OccupiedUnit == null;
@@ -32,19 +32,19 @@ public class Tile : MonoBehaviour
 
     public virtual void Init(int x, int y)
     {
-       
+
     }
 
 
     private void OnMouseEnter()
     {
-        MenuManager.instance.ShowTileInfo(this); 
+        MenuManager.instance.ShowTileInfo(this);
     }
 
- 
+
     private void OnMouseExit()
     {
-        MenuManager.instance.ShowTileInfo(null); 
+        MenuManager.instance.ShowTileInfo(null);
     }
 
 
@@ -71,6 +71,4 @@ public class Tile : MonoBehaviour
         unit.OccupiedTile = this; // Update the unit's OccupiedTile reference to this tile.
     }
 
-
 }
-

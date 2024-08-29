@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerHandler : MonoBehaviour
 {
     private Tile tile;
@@ -29,11 +30,18 @@ public class PlayerHandler : MonoBehaviour
                 // If a hero is already selected:
                 if (UnitManager.Instance.SelectedHero != null)
                 {
-                    var enemy = (BaseEnemy)tile.OccupiedUnit;
-                    Destroy(enemy.gameObject); // Destroy the enemy unit.
+                    if (tile.OccupiedUnit is BaseEnemy enemy)
+                    {
+                        // Cast the selected hero to BaseHero
+                        BaseHero hero = (BaseHero)UnitManager.Instance.SelectedHero;
 
-                    UnitManager.Instance.SetSelectedHero(null); // Deselect the hero.
-                    // Additional logic for dealing damage or attacking can be added here.
+                        // Call the Attack method of the hero to attack the enemy
+                        hero.Attack(enemy);
+
+
+                        // Deselect the hero
+                        UnitManager.Instance.SetSelectedHero(null);
+                    }
                 }
             }
         }

@@ -100,3 +100,6 @@ MonoBehaviour:
   OccupiedTile: {fileID: 0}
   Faction: 0
   UnitName: Knight
+  Health: 20
+  MaxHealth: 20
+  AttackPower: 6
