@@ -1,67 +1,75 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    [SerializeField] private Color baseColor;
-    [SerializeField] private bool isWalkable;
-    public string tileName;
 
-    public BaseUnit OccupiedUnit;
+    [SerializeField] private Color baseColor; 
+    [SerializeField] private bool isWalkable;
+
+    public string tileName; 
+    private TileHandler tileHandler;
+    public BaseUnit OccupiedUnit; 
+
+
     public bool walkable => isWalkable && OccupiedUnit == null;
 
-    public virtual void Init(int x, int y)
+    private void Awake()
     {
-
-    }
-
-    private void OnMouseEnter()
-    {
-        MenuManager.instance.ShowTileInfo(this);
-    }
-    private void OnMouseExit()
-    {
-        MenuManager.instance.ShowTileInfo(null);
-    }
-
-    private void OnMouseDown()
-    {
-        if (GameManager.Instance.gameState != GameManager.GameState.HeroesTurn) return;
-
-        if (OccupiedUnit != null)
+        // Ensure TileHandler is attached to the same GameObject as this Tile
+        tileHandler = GetComponent<TileHandler>();
+        if (tileHandler != null)
         {
-            if(OccupiedUnit.Faction == Faction.Hero) UnitManager.Instance.SetSelectedHero((BaseHero)OccupiedUnit);
-            else
-            {
-                if(UnitManager.Instance.SelectedHero != null)
-                {
-                    var enemy = (BaseEnemy)OccupiedUnit;
-                    Destroy(enemy.gameObject);
-                    UnitManager.Instance.SetSelectedHero(null);
-                    //Enemy.takeDamage
-                    //UnitManager.Instance.SelectedHero.attack
-                }
-            } 
+            tileHandler.Initialize(this);
         }
         else
         {
-            if(UnitManager.Instance.SelectedHero != null)
-            {
-                SetUnit(UnitManager.Instance.SelectedHero);
-                UnitManager.Instance.SetSelectedHero(null);
-            }
+            Debug.LogError("TileHandler component is missing from the GameObject!");
         }
     }
 
-    public void SetUnit(BaseUnit unit)
+    public virtual void Init(int x, int y)
     {
-        if (unit.OccupiedTile != null) unit.OccupiedTile.OccupiedUnit = null;
-        unit.transform.position = transform.position;
-        OccupiedUnit = unit;
-        unit.OccupiedTile = this;
+       
     }
 
+
+    private void OnMouseEnter()
+    {
+        MenuManager.instance.ShowTileInfo(this); 
+    }
+
+ 
+    private void OnMouseExit()
+    {
+        MenuManager.instance.ShowTileInfo(null); 
+    }
+
+
+    private void OnMouseDown()
+    {
+        if (tileHandler != null)
+        {
+            tileHandler.HandleTileClick();
+        }
+        else
+        {
+            Debug.LogError("TileHandler is not initialized!");
+        }
+    }
+
+    // This method sets the unit on the tile. It handles the movement of units from one tile to another.
+    public void SetUnit(BaseUnit unit)
+    {
+        // If the unit is already on another tile, clear the unit from that tile.
+        if (unit.OccupiedTile != null) unit.OccupiedTile.OccupiedUnit = null;
+
+        unit.transform.position = transform.position; // Move the unit to this tile's position.
+        OccupiedUnit = unit; // Set this tile's OccupiedUnit to the given unit.
+        unit.OccupiedTile = this; // Update the unit's OccupiedTile reference to this tile.
+    }
 
 
 }
