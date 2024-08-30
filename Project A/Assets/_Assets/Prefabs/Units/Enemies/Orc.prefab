@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7914453327112128216}
   - component: {fileID: 9086997284576542758}
   - component: {fileID: 7332830524687463268}
+  - component: {fileID: 3657993009300971269}
   m_Layer: 0
   m_Name: Orc
   m_TagString: Untagged
@@ -104,3 +105,25 @@ MonoBehaviour:
   MaxHealth: 20
   AttackPower: 10
   MovementRange: 2
+  characterAnimator: {fileID: 0}
+--- !u!95 &3657993009300971269
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615368857634681963}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c0748f57d0d707243851742f8d2cb513, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

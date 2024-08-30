@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6466732535945381217}
   - component: {fileID: 6763092924530271726}
   - component: {fileID: 8914835496562857196}
+  - component: {fileID: 9095713316553379861}
   m_Layer: 0
   m_Name: Swordsman
   m_TagString: Untagged
@@ -105,3 +106,24 @@ MonoBehaviour:
   AttackPower: 0
   MovementRange: 0
   characterAnimator: {fileID: 0}
+--- !u!95 &9095713316553379861
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80600048635444662}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18992af5acf87c0448871b6dcf900b95, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
