@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4190474020529565251}
   - component: {fileID: 4983824748470235381}
+  - component: {fileID: 5877637193264603663}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -84,3 +85,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5877637193264603663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7537045438000248892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef53a3289688644b96e23c2b1c0f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OccupiedTile: {fileID: 0}
+  Faction: 1
+  UnitName: 
+  Health: 0
+  MaxHealth: 0
+  AttackPower: 0
+  MovementRange: 0
+  characterAnimator: {fileID: 0}

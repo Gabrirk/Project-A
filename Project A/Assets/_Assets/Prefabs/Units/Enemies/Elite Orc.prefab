@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8719117569836370168}
   - component: {fileID: 6732317658125894221}
+  - component: {fileID: 7831222355355049303}
   m_Layer: 0
   m_Name: Elite Orc
   m_TagString: Untagged
@@ -84,3 +85,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7831222355355049303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6650758193313332923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f92faaf83920f4f8a229c1627b3785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OccupiedTile: {fileID: 0}
+  Faction: 1
+  UnitName: 
+  Health: 0
+  MaxHealth: 0
+  AttackPower: 0
+  MovementRange: 0
+  characterAnimator: {fileID: 0}

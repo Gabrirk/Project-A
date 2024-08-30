@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5786084762898889192}
   - component: {fileID: 9016088127047839147}
+  - component: {fileID: -3651752214102864525}
   m_Layer: 0
   m_Name: Knight Templar
   m_TagString: Untagged
@@ -84,3 +85,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3651752214102864525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8755581513411503532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f9794fea67f7c4ca057ae44db3fb56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OccupiedTile: {fileID: 0}
+  Faction: 0
+  UnitName: 
+  Health: 0
+  MaxHealth: 0
+  AttackPower: 0
+  MovementRange: 0
+  characterAnimator: {fileID: 0}
