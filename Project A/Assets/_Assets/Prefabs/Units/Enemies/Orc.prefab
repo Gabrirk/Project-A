@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7914453327112128216}
   - component: {fileID: 9086997284576542758}
-  - component: {fileID: 3657993009300971269}
   - component: {fileID: 2811279487396251605}
+  - component: {fileID: 3657993009300971269}
   - component: {fileID: 5266306944091965475}
   m_Layer: 0
   m_Name: Orc
@@ -87,6 +87,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2811279487396251605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615368857634681963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624526908cfe654582cdf04019185a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OccupiedTile: {fileID: 0}
+  Faction: 1
+  UnitName: Orc
+  Health: 10
+  MaxHealth: 10
+  AttackPower: 10
+  MovementRange: 10
+  characterAnimator: {fileID: 5266306944091965475}
 --- !u!95 &3657993009300971269
 Animator:
   serializedVersion: 5
@@ -108,26 +128,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2811279487396251605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6615368857634681963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a624526908cfe654582cdf04019185a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OccupiedTile: {fileID: 0}
-  Faction: 1
-  UnitName: Orc
-  Health: 10
-  MaxHealth: 10
-  AttackPower: 10
-  MovementRange: 10
-  characterAnimator: {fileID: 5266306944091965475}
 --- !u!114 &5266306944091965475
 MonoBehaviour:
   m_ObjectHideFlags: 0

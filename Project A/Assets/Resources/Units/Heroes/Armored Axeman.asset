@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Armored Axeman
   m_EditorClassIdentifier: 
   Faction: 0
-  UnitPrefab: {fileID: 520555269773531050, guid: 0706f087e92814644a962df0eef7060d, type: 3}
+  UnitPrefab: {fileID: -3392477087018656883, guid: 0706f087e92814644a962df0eef7060d, type: 3}

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1015801595847534951}
   - component: {fileID: 5047284545962942982}
   - component: {fileID: 6303939896956671863}
-  - component: {fileID: 3444050154871724514}
   - component: {fileID: -3905901329428628724}
+  - component: {fileID: 3444050154871724514}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -107,21 +107,6 @@ MonoBehaviour:
   AttackPower: 10
   MovementRange: 10
   characterAnimator: {fileID: 3444050154871724514}
---- !u!114 &3444050154871724514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8424563860529040201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7d860f1e4dd6cb4684fb0c7d9361567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idleAnimationName: Knight_Idle
-  moveAnimationName: Knight_Move
-  attackAnimationName: Knight_Attack01
 --- !u!95 &-3905901329428628724
 Animator:
   serializedVersion: 5
@@ -143,3 +128,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3444050154871724514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8424563860529040201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d860f1e4dd6cb4684fb0c7d9361567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleAnimationName: Knight_Idle
+  moveAnimationName: Knight_Move
+  attackAnimationName: Knight_Attack01
