@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1015801595847534951}
   - component: {fileID: 5047284545962942982}
-  - component: {fileID: 4823910323343801993}
-  - component: {fileID: 8411848424193123081}
+  - component: {fileID: 6303939896956671863}
+  - component: {fileID: 3444050154871724514}
+  - component: {fileID: -3905901329428628724}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4823910323343801993
+--- !u!114 &6303939896956671863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,17 +96,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 8424563860529040201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2895e7c270adac54ab44a680817735a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 817ba71ff6ce1b449a7ec545c37c7dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OccupiedTile: {fileID: 0}
   Faction: 0
   UnitName: Knight
-  Health: 20
-  MaxHealth: 20
-  AttackPower: 6
-  MovementRange: 2
---- !u!95 &8411848424193123081
+  Health: 10
+  MaxHealth: 10
+  AttackPower: 10
+  MovementRange: 10
+  characterAnimator: {fileID: 3444050154871724514}
+--- !u!114 &3444050154871724514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8424563860529040201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d860f1e4dd6cb4684fb0c7d9361567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleAnimationName: Knight_Idle
+  moveAnimationName: Knight_Move
+  attackAnimationName: Knight_Attack01
+--- !u!95 &-3905901329428628724
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -115,7 +132,7 @@ Animator:
   m_GameObject: {fileID: 8424563860529040201}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 451d1e327038ee343b88f29071fef6f4, type: 2}
+  m_Controller: {fileID: 9100000, guid: be23776305ec9354389da661b13b6531, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

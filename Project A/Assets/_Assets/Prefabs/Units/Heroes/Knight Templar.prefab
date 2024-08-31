@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5786084762898889192}
   - component: {fileID: 9016088127047839147}
   - component: {fileID: -3651752214102864525}
+  - component: {fileID: 4813795138225214922}
+  - component: {fileID: -5481962149950771474}
   m_Layer: 0
   m_Name: Knight Templar
   m_TagString: Untagged
@@ -99,9 +101,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OccupiedTile: {fileID: 0}
   Faction: 0
-  UnitName: 
-  Health: 0
-  MaxHealth: 0
-  AttackPower: 0
-  MovementRange: 0
-  characterAnimator: {fileID: 0}
+  UnitName: Knight Templar
+  Health: 10
+  MaxHealth: 10
+  AttackPower: 10
+  MovementRange: 10
+  characterAnimator: {fileID: -5481962149950771474}
+--- !u!95 &4813795138225214922
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8755581513411503532}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ebec8f91de9136d498f94eaf70e4ca07, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-5481962149950771474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8755581513411503532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d860f1e4dd6cb4684fb0c7d9361567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleAnimationName: Knight_Templar_Idle
+  moveAnimationName: Knight_Templar_Move
+  attackAnimationName: Knight_Templar_Attack01

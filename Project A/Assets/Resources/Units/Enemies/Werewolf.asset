@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9066017dea2d3e47826d3718ec8ba0a, type: 3}
   m_Name: Werewolf
   m_EditorClassIdentifier: 
-  Faction: 0
+  Faction: 1
   UnitPrefab: {fileID: -7083772503888377750, guid: f382e106a8653d3489853914b7e3a825, type: 3}

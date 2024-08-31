@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9066017dea2d3e47826d3718ec8ba0a, type: 3}
   m_Name: Slime
   m_EditorClassIdentifier: 
-  Faction: 0
+  Faction: 1
   UnitPrefab: {fileID: 8116423916777845696, guid: bced03f3f0c32d848bb54f6d51c28e6d, type: 3}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4307659552922553216}
   - component: {fileID: -407036448726651440}
   - component: {fileID: 2484515491242735709}
+  - component: {fileID: -4451652808483166011}
   m_Layer: 0
   m_Name: Orc Rider
   m_TagString: Untagged
@@ -100,12 +101,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OccupiedTile: {fileID: 0}
   Faction: 1
-  UnitName: 
-  Health: 0
-  MaxHealth: 0
-  AttackPower: 0
-  MovementRange: 0
-  characterAnimator: {fileID: 0}
+  UnitName: Orc Rider
+  Health: 10
+  MaxHealth: 10
+  AttackPower: 10
+  MovementRange: 10
+  characterAnimator: {fileID: -4451652808483166011}
 --- !u!95 &2484515491242735709
 Animator:
   serializedVersion: 5
@@ -127,3 +128,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-4451652808483166011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5895508457288936622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d860f1e4dd6cb4684fb0c7d9361567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleAnimationName: Orc_Rider_Idle
+  moveAnimationName: Orc_Rider_Move
+  attackAnimationName: Orc_Rider_Attack01

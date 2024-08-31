@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9066017dea2d3e47826d3718ec8ba0a, type: 3}
   m_Name: Orc Rider
   m_EditorClassIdentifier: 
-  Faction: 0
+  Faction: 1
   UnitPrefab: {fileID: -407036448726651440, guid: d39956cbf5feaaa428e645fdbc848cdf, type: 3}

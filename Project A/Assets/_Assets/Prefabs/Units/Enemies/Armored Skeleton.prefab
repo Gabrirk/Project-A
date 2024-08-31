@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8828940496049615462}
   - component: {fileID: 3503463060819074760}
   - component: {fileID: 4143801681644382600}
+  - component: {fileID: 8224911969086923444}
   m_Layer: 0
   m_Name: Armored Skeleton
   m_TagString: Untagged
@@ -100,12 +101,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OccupiedTile: {fileID: 0}
   Faction: 1
-  UnitName: 
-  Health: 0
-  MaxHealth: 0
-  AttackPower: 0
-  MovementRange: 0
-  characterAnimator: {fileID: 0}
+  UnitName: Armored Skeleton
+  Health: 10
+  MaxHealth: 10
+  AttackPower: 10
+  MovementRange: 10
+  characterAnimator: {fileID: 8224911969086923444}
 --- !u!95 &4143801681644382600
 Animator:
   serializedVersion: 5
@@ -127,3 +128,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8224911969086923444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148393941184213180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d860f1e4dd6cb4684fb0c7d9361567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleAnimationName: Armored_Skeleton_Idle
+  moveAnimationName: Armored_Skeleton_Move
+  attackAnimationName: Armored_Skeleton_Attack01

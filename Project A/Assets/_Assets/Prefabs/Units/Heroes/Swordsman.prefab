@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6763092924530271726}
   - component: {fileID: 8914835496562857196}
   - component: {fileID: 9095713316553379861}
+  - component: {fileID: -8106734786906429389}
   m_Layer: 0
   m_Name: Swordsman
   m_TagString: Untagged
@@ -100,12 +101,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OccupiedTile: {fileID: 0}
   Faction: 0
-  UnitName: 
-  Health: 0
-  MaxHealth: 0
-  AttackPower: 0
-  MovementRange: 0
-  characterAnimator: {fileID: 0}
+  UnitName: Swordsman
+  Health: 10
+  MaxHealth: 10
+  AttackPower: 10
+  MovementRange: 10
+  characterAnimator: {fileID: -8106734786906429389}
 --- !u!95 &9095713316553379861
 Animator:
   serializedVersion: 5
@@ -127,3 +128,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-8106734786906429389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80600048635444662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d860f1e4dd6cb4684fb0c7d9361567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleAnimationName: Swordsman_Idle
+  moveAnimationName: Swordsman_Move
+  attackAnimationName: Swordsman_Attack01

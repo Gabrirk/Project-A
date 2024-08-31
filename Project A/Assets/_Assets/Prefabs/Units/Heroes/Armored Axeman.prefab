@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5975198776786515983}
   - component: {fileID: 93627223469975111}
-  - component: {fileID: 520555269773531050}
   - component: {fileID: 2511239272416434195}
   - component: {fileID: -5153108960709485216}
+  - component: {fileID: -3392477087018656883}
   m_Layer: 0
   m_Name: Armored Axeman
   m_TagString: Untagged
@@ -87,26 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &520555269773531050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582897498444954893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ec94ae2de17c14fb961096489ace4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OccupiedTile: {fileID: 0}
-  Faction: 0
-  UnitName: Armored Axeman
-  Health: 20
-  MaxHealth: 20
-  AttackPower: 12
-  MovementRange: 2
-  characterAnimator: {fileID: -5153108960709485216}
 --- !u!95 &2511239272416434195
 Animator:
   serializedVersion: 5
@@ -143,3 +123,23 @@ MonoBehaviour:
   idleAnimationName: Armored_Axeman_Idle
   moveAnimationName: Armored_Axeman_Move
   attackAnimationName: Armored_Axeman_Attack01
+--- !u!114 &-3392477087018656883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582897498444954893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7429eae2d1921c948b5e19c4dedfd815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OccupiedTile: {fileID: 0}
+  Faction: 0
+  UnitName: Armored Axeman
+  Health: 10
+  MaxHealth: 10
+  AttackPower: 10
+  MovementRange: 10
+  characterAnimator: {fileID: -5153108960709485216}

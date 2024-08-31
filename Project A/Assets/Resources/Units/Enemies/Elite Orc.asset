@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9066017dea2d3e47826d3718ec8ba0a, type: 3}
   m_Name: Elite Orc
   m_EditorClassIdentifier: 
-  Faction: 0
+  Faction: 1
   UnitPrefab: {fileID: 7831222355355049303, guid: 5a58c5176d33aef4b8521ed6678ee7f3, type: 3}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9066017dea2d3e47826d3718ec8ba0a, type: 3}
   m_Name: Greatsword Skeleton
   m_EditorClassIdentifier: 
-  Faction: 0
+  Faction: 1
   UnitPrefab: {fileID: -6832889867616436558, guid: e537ceb2347524c4ebaf9077face3cc0, type: 3}

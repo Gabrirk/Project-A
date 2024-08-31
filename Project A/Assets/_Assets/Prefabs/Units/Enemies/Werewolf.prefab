@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7747175640266411830}
   - component: {fileID: -7083772503888377750}
   - component: {fileID: 7573360995066777791}
+  - component: {fileID: -7228477962151644475}
   m_Layer: 0
   m_Name: Werewolf
   m_TagString: Untagged
@@ -100,12 +101,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OccupiedTile: {fileID: 0}
   Faction: 1
-  UnitName: 
-  Health: 0
-  MaxHealth: 0
-  AttackPower: 0
-  MovementRange: 0
-  characterAnimator: {fileID: 0}
+  UnitName: Werewolf
+  Health: 10
+  MaxHealth: 10
+  AttackPower: 10
+  MovementRange: 10
+  characterAnimator: {fileID: -7228477962151644475}
 --- !u!95 &7573360995066777791
 Animator:
   serializedVersion: 5
@@ -127,3 +128,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7228477962151644475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3327867901338838032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d860f1e4dd6cb4684fb0c7d9361567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleAnimationName: Werewolf_Idle
+  moveAnimationName: Werewolf_Move
+  attackAnimationName: Werewolf_Attack01

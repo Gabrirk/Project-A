@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1974483246507784244}
   - component: {fileID: -3139088546314261132}
   - component: {fileID: 4727898694264194680}
+  - component: {fileID: 6285503193217244375}
   m_Layer: 0
   m_Name: Werebear
   m_TagString: Untagged
@@ -100,12 +101,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OccupiedTile: {fileID: 0}
   Faction: 1
-  UnitName: 
-  Health: 0
-  MaxHealth: 0
-  AttackPower: 0
-  MovementRange: 0
-  characterAnimator: {fileID: 0}
+  UnitName: Werebear
+  Health: 10
+  MaxHealth: 10
+  AttackPower: 10
+  MovementRange: 10
+  characterAnimator: {fileID: 6285503193217244375}
 --- !u!95 &4727898694264194680
 Animator:
   serializedVersion: 5
@@ -127,3 +128,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6285503193217244375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6587780895853344032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d860f1e4dd6cb4684fb0c7d9361567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleAnimationName: Werebear_Idle
+  moveAnimationName: Werebear_Move
+  attackAnimationName: Werebear_Attack01

@@ -101,11 +101,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OccupiedTile: {fileID: 0}
   Faction: 0
-  UnitName: 
-  Health: 0
-  MaxHealth: 0
-  AttackPower: 0
-  MovementRange: 0
+  UnitName: Archer
+  Health: 10
+  MaxHealth: 10
+  AttackPower: 10
+  MovementRange: 10
   characterAnimator: {fileID: 8079744901696838915}
 --- !u!95 &6805394032072899282
 Animator:
