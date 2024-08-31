@@ -72,11 +72,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6955683752409476073}
   m_SourcePrefab: {fileID: 100100000, guid: 5c02d2f5530cda0488c1fa6b8bbaaf89, type: 3}
---- !u!212 &6126960397376073737 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 2203478575652535226, guid: 5c02d2f5530cda0488c1fa6b8bbaaf89, type: 3}
-  m_PrefabInstance: {fileID: 5445698659302722483}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7095649221835787650 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3020733703728121393, guid: 5c02d2f5530cda0488c1fa6b8bbaaf89, type: 3}
@@ -94,10 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f635c07b447bc479b1442804f223ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0.58431375, g: 0.42352945, b: 0.42352945, a: 0}
-  spriteRenderer: {fileID: 6126960397376073737}
-  highlight: {fileID: 7471009331225234693}
+  baseColor: {r: 0.58431375, g: 0.42352945, b: 0.42352945, a: 1}
   isWalkable: 1
+  tileHighlight: {fileID: 7471009331225234693}
   tileName: Mountain
   OccupiedUnit: {fileID: 0}
 --- !u!1 &7471009331225234693 stripped

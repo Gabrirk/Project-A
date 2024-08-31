@@ -8,6 +8,7 @@ public class Tile : MonoBehaviour
 
     [SerializeField] private Color baseColor;
     [SerializeField] private bool isWalkable;
+    [SerializeField] private GameObject tileHighlight;
 
     public string tileName;
     private PlayerHandler playerHandler;
@@ -28,10 +29,12 @@ public class Tile : MonoBehaviour
         {
             Debug.LogError("TileHandler component is missing from the GameObject!");
         }
+
     }
 
     public virtual void Init(int x, int y)
     {
+
 
     }
 
@@ -39,12 +42,14 @@ public class Tile : MonoBehaviour
     private void OnMouseEnter()
     {
         MenuManager.instance.ShowTileInfo(this);
+        tileHighlight.SetActive(true);
     }
 
 
     private void OnMouseExit()
     {
         MenuManager.instance.ShowTileInfo(null);
+        tileHighlight.SetActive(false);
     }
 
 

@@ -15,10 +15,28 @@ public class BaseUnit : MonoBehaviour
 
     public CharacterAnimator characterAnimator;
 
+    // Stat ranges
+    public int MinHealth = 50;
+    public int MaxHealthValue = 100;
+    public int MinAttackPower = 10;
+    public int MaxAttackPower = 20;
+    public int MinMovementRange = 1;
+    public int MaxMovementRange = 5;
+
     private void Awake()
     {
         // Initialize or retrieve the CharacterAnimator component
         characterAnimator = GetComponent<CharacterAnimator>();
+
+        // Randomly generate unit stats
+        Initialize(
+            Random.Range(MinHealth, MaxHealthValue),
+            Random.Range(MinAttackPower, MaxAttackPower),
+            Random.Range(MinHealth, MaxHealthValue) // Assuming max health is the same as health
+        );
+
+        // Randomly set MovementRange
+        MovementRange = Random.Range(MinMovementRange, MaxMovementRange);
     }
 
     public void Initialize(int health, int attackPower, int maxHealth)

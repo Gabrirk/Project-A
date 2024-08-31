@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Orc
   m_EditorClassIdentifier: 
   Faction: 1
-  UnitPrefab: {fileID: 0}
+  UnitPrefab: {fileID: 2811279487396251605, guid: 958104f93e7c52f428fb51139cb2a38c, type: 3}
