@@ -51,6 +51,13 @@ public class BaseUnit : MonoBehaviour
         // Check if the target tile is different from the current tile
         if (OccupiedTile == targetTile) return;
 
+        // Check if the target tile is highlighted (in range)
+        if (!Tile.IsHighlighted(targetTile))
+        {
+            Debug.Log("Target tile is out of range!");
+            return;
+        }
+
         // Set the previous tile's OccupiedUnit to null
         if (OccupiedTile != null)
         {

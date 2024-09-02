@@ -98,18 +98,26 @@ public class Tile : MonoBehaviour
         if (unit == null) return;
 
         Vector2Int start = unit.OccupiedTile.Position;
+
         for (int x = -range; x <= range; x++)
         {
             for (int y = -range; y <= range; y++)
             {
                 Vector2Int offset = new Vector2Int(x, y);
                 Vector2Int position = start + offset;
-                Tile tile = GridManager.Instance.GetTile(new Vector2(position.x, position.y)); // Use GridManager for tile retrieval
 
-                if (tile != null && tile.walkable && !highlightedTiles.Contains(tile))
+                // Calculate Manhattan distance
+                int manhattanDistance = Mathf.Abs(offset.x) + Mathf.Abs(offset.y);
+
+                if (manhattanDistance <= range) // Check if within Manhattan distance
                 {
-                    tile.ShowHighlight();
-                    highlightedTiles.Add(tile);
+                    Tile tile = GridManager.Instance.GetTile(new Vector2(position.x, position.y)); // Use GridManager for tile retrieval
+
+                    if (tile != null && tile.walkable && !highlightedTiles.Contains(tile))
+                    {
+                        tile.ShowHighlight();
+                        highlightedTiles.Add(tile);
+                    }
                 }
             }
         }
@@ -133,5 +141,9 @@ public class Tile : MonoBehaviour
     private void HideHighlight()
     {
         tileHighlight.SetActive(false);
+    }
+    public static bool IsHighlighted(Tile tile)
+    {
+        return highlightedTiles.Contains(tile);
     }
 }
