@@ -23,6 +23,9 @@ public class BaseUnit : MonoBehaviour
     public int MinMovementRange = 1;
     public int MaxMovementRange = 5;
 
+    private bool hasMoved;
+    private bool hasActed;
+
     private void Awake()
     {
         // Initialize or retrieve the CharacterAnimator component
@@ -46,50 +49,62 @@ public class BaseUnit : MonoBehaviour
         MaxHealth = maxHealth;
     }
 
+    public void StartTurn()
+    {
+        hasMoved = false;
+        hasActed = false;
+    }
+
+    public void EndTurn()
+    {
+        hasMoved = true;
+        hasActed = true;
+    }
+
     public void MoveTo(Tile targetTile)
     {
-        // Check if the target tile is different from the current tile
+        if (hasMoved)
+        {
+            Debug.Log($"{UnitName} has already moved this turn.");
+            return;
+        }
+
         if (OccupiedTile == targetTile) return;
 
-        // Check if the target tile is highlighted (in range)
         if (!Tile.IsHighlighted(targetTile))
         {
             Debug.Log("Target tile is out of range!");
             return;
         }
 
-        // Set the previous tile's OccupiedUnit to null
         if (OccupiedTile != null)
         {
             OccupiedTile.OccupiedUnit = null;
         }
 
-        // Determine direction
         Vector3 direction = targetTile.transform.position - transform.position;
 
-        // Flip the sprite based on the direction
         if (direction.x < 0)
         {
-            // Moving left: flip the sprite by inverting the x scale
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
         else if (direction.x > 0)
         {
-            // Moving right: ensure the sprite is not flipped
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
 
         SetAnimation(CharacterAnimation.Move);
         StartCoroutine(MoveCoroutine(targetTile));
+        hasMoved = true;
     }
 
     private IEnumerator MoveCoroutine(Tile targetTile)
     {
         Vector3 start = transform.position;
         Vector3 end = targetTile.transform.position;
-        float moveSpeed = 5f; // Movement speed in units per second
+        float moveSpeed = 5f;
         float distance = Vector3.Distance(start, end);
-        float moveDuration = distance / moveSpeed; // Calculate the time needed for the move
+        float moveDuration = distance / moveSpeed;
 
         float startTime = Time.time;
 
@@ -100,22 +115,28 @@ public class BaseUnit : MonoBehaviour
             yield return null;
         }
 
-        transform.position = end; // Ensure the final position is accurate
-        OccupiedTile = targetTile; // Update the unit's current tile
-        targetTile.OccupiedUnit = this; // Set this tile's OccupiedUnit to the unit
+        transform.position = end;
+        OccupiedTile = targetTile;
+        targetTile.OccupiedUnit = this;
         SetAnimation(CharacterAnimation.Idle);
     }
 
     public void Attack(BaseUnit targetUnit)
     {
+        if (hasActed)
+        {
+            Debug.Log($"{UnitName} has already performed an action this turn.");
+            return;
+        }
+
         if (targetUnit == null)
         {
             Debug.LogError("Target unit is null!");
             return;
         }
 
-        // Trigger the attack animation and handle damage after animation
         StartCoroutine(HandleAttack(targetUnit));
+        hasActed = true;
     }
 
     private IEnumerator HandleAttack(BaseUnit targetUnit)
