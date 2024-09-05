@@ -23,8 +23,8 @@ public class BaseUnit : MonoBehaviour
     public int MinMovementRange = 1;
     public int MaxMovementRange = 5;
 
-    private bool hasMoved;
-    private bool hasActed;
+    public bool hasMoved;
+    public bool hasActed;
 
     private void Awake()
     {
@@ -121,7 +121,7 @@ public class BaseUnit : MonoBehaviour
         SetAnimation(CharacterAnimation.Idle);
     }
 
-    public void Attack(BaseUnit targetUnit)
+    public virtual void Attack(BaseUnit targetUnit)
     {
         if (hasActed)
         {
@@ -185,6 +185,18 @@ public class BaseUnit : MonoBehaviour
         {
             Debug.LogWarning("CharacterAnimator not set for " + UnitName);
         }
+    }
+
+    public bool IsTargetInRange(BaseUnit targetUnit, int spellRange)
+    {
+        // Calculate the distance between this unit and the target unit
+        float distance = Vector3.Distance(transform.position, targetUnit.transform.position);
+
+        // Convert distance from world units to tile-based units (assuming 1 unit = 1 tile)
+        int tileDistance = Mathf.RoundToInt(distance);
+
+        // Return true if the target is within the spell range
+        return tileDistance <= spellRange;
     }
 }
 

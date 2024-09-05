@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6122780723475253508
+--- !u!1 &6806205109100658106
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7071318351864897772}
-  - component: {fileID: 5733586053695011068}
-  - component: {fileID: 4040393150096673030}
-  - component: {fileID: 72553950126694178}
-  - component: {fileID: -1539657489677883081}
+  - component: {fileID: 3101468239345891354}
+  - component: {fileID: 949176445729821568}
+  - component: {fileID: 7872663390393425326}
+  - component: {fileID: -5135666828491956796}
   m_Layer: 0
-  m_Name: Wizard
+  m_Name: Ice Shard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7071318351864897772
+--- !u!4 &3101468239345891354
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122780723475253508}
+  m_GameObject: {fileID: 6806205109100658106}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -35,13 +34,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5733586053695011068
+--- !u!212 &949176445729821568
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122780723475253508}
+  m_GameObject: {fileID: 6806205109100658106}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,8 +74,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 128077025, guid: 2f780a81ceeac444e8b4f68857cd0645, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 1566786416, guid: b1a055bb5d43f2545b9a3f6f5bad2a91, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,47 +86,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4040393150096673030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122780723475253508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0550af2d46397fb47bbc63fe382b4380, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OccupiedTile: {fileID: 0}
-  Faction: 0
-  UnitName: Wizard
-  Health: 10
-  MaxHealth: 10
-  AttackPower: 10
-  MovementRange: 10
-  characterAnimator: {fileID: -1539657489677883081}
-  MinHealth: 50
-  MaxHealthValue: 100
-  MinAttackPower: 10
-  MaxAttackPower: 20
-  MinMovementRange: 1
-  MaxMovementRange: 5
-  hasMoved: 0
-  hasActed: 0
-  fireballPrefab: {fileID: 6881461435087285259, guid: 57e99be4c00106c4d999fecf9058a4b4, type: 3}
-  iceShardPrefab: {fileID: 6806205109100658106, guid: 4d8e5d979870bdd499924c0f7e9a02cf, type: 3}
---- !u!95 &72553950126694178
+--- !u!95 &7872663390393425326
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122780723475253508}
+  m_GameObject: {fileID: 6806205109100658106}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 96f076b3ff7e4f0458c3177b1c2557c6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5989ed0faad56d042a75d67ca953eccd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -138,18 +107,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-1539657489677883081
+--- !u!114 &-5135666828491956796
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122780723475253508}
+  m_GameObject: {fileID: 6806205109100658106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7d860f1e4dd6cb4684fb0c7d9361567, type: 3}
+  m_Script: {fileID: 11500000, guid: 629d82da4143a8a4989900265454e5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleAnimationName: Wizard_Idle
-  moveAnimationName: Wizard_Move
-  attackAnimationName: Wizard_Attack01
+  AbilityName: Ice Shard
